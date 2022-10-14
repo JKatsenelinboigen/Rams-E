@@ -47,3 +47,17 @@ In another terminal run the React front end with the command
 cd frontend
 npm start
 ```
+# Fine Tuning
+
+The call to text completion API takes the following format:
+```python
+response = openai.Completion.create(
+    model="text-davinci-002",
+    prompt="Write a title and recipe based on these ingredients:\n" + "\n".join(ingredients_list),
+    temperature=.95,
+    max_tokens=240,
+    frequency_penalty=0.0,
+    presence_penalty=0.0
+)
+```
+Changing the temperature affects how creative the recipes are, with 0 being 100% deterministic and simple and 1 being novel and interesting. 
