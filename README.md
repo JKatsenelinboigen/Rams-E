@@ -1,5 +1,7 @@
 # Rams-E
-A GPT-3 based AI recipe generator. 100% unique, original recipes at the press of a button. Backend written in Python, frontend written in Typescript & React
+A GPT-3 based AI recipe generator. 100% unique, original recipes at the press of a button. Natural language model for recipe generation using OpenAI davinci GPT-3 API. Image diffusion and AI image generation by Replicate stable-diffusion API. Backend written in Python, frontend written in Typescript & React
+
+![alt text](screenshot.png)
 
 # Dependencies
 ### AI Libraries:   
@@ -7,7 +9,7 @@ A GPT-3 based AI recipe generator. 100% unique, original recipes at the press of
 [Replicate](https://replicate.com/docs/get-started/python)  
 
 ### Backend:
-[Flask (for the API framework)](https://flask.palletsprojects.com/en/2.2.x/)  
+[Flask](https://flask.palletsprojects.com/en/2.2.x/)  
 [Flask CORS](https://flask-cors.readthedocs.io/en/latest/)  
 
 ### Frontend:  
@@ -38,5 +40,3 @@ In another terminal run the React front end with the command
 cd frontend
 npm start
 ```
-
-
