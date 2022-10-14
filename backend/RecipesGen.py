@@ -27,6 +27,9 @@ def getRecipe():
 
     args = request.args.to_dict(flat=False)
 
+    if('i' not in args.keys()):
+        return 
+    
     ingredients_list = args['i']
 
     
