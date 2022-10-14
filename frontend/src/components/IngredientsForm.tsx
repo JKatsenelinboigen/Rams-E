@@ -34,7 +34,8 @@ function IngredientsForm(props: IngredientsFormFunction){
         var newList = [...ingredientsList]
         newList.splice(index, 1);
         setIngredientsList(newList);
-
+        props.parentSetArray(newList);
+        console.log(ingredientsList)
     }
 
     var i = -1;
