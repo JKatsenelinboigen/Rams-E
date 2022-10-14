@@ -1,5 +1,12 @@
 # Rams-E
-A GPT-3 based AI recipe generator. 100% unique, original recipes at the press of a button. Natural language model for recipe generation using OpenAI davinci GPT-3 API. Image diffusion and AI image generation by Replicate stable-diffusion API. Backend written in Python, frontend written in Typescript & React
+A GPT-3 based AI recipe generator.  
+100% unique, original recipes at the press of a button.   
+
+Natural language model for recipe generation using OpenAI davinci GPT-3 API.
+
+Image diffusion and AI image generation by Replicate stable-diffusion API.  
+
+Backend written in Python, frontend written in Typescript & React
 
 ![alt text](screenshot.png)
 
