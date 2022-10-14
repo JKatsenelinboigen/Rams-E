@@ -1,4 +1,3 @@
-from email.mime import image
 from urllib import request
 import openai
 from flask import Flask, Response, request

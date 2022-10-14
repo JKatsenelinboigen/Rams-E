@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { Button, Container, Paper, TextField,  } from '@mui/material';
-import { isEditable } from '@testing-library/user-event/dist/utils';
-import axios from 'axios';
+import {Card } from '@mui/material';
 
 interface RecipeProps{
     writtenRecipe: string
 }
 
 
-
 function Recipe(props: RecipeProps){
 
     return(
-        <Paper style = {styles.writtenRecipe}> {props.writtenRecipe.trim()} </Paper>
+        <Card style={styles.writtenRecipe}> {props.writtenRecipe.trim()} </Card>
     );
 }
 
