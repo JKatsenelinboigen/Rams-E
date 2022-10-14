@@ -6,16 +6,24 @@ import json
 from flask_cors import CORS
 import replicate
 
-replicate.Client(api_token="1cc1a3f2abbd51c6bbdeadb1fc119bd06f2dd9c5")
-app = Flask(__name__)
 
+
+app = Flask(__name__)
 CORS(app)
+
+def getKey(service):
+    with open('keys.json') as fid:
+        data = json.load(fid)
+        return data[service]
+    
+
 
 
 @app.route("/getRecipe", methods = ["GET"] )
 def getRecipe():
 
-    openai.api_key = "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"
+    
+    openai.api_key = getKey("openai")
     engines = openai.Engine.list()
 
     args = request.args.to_dict(flat=False)
@@ -47,12 +55,13 @@ def getRecipe():
 @app.route("/getImage", methods=["GET"])
 def getImage():
 
+    rep = replicate.Client(api_token=getKey("replicate"))
 
     args = request.args.to_dict(flat=False)
     image_prompt = args['prompt'][0]
     print(image_prompt)
 
-    model = replicate.models.get("stability-ai/stable-diffusion")
+    model = rep.models.get("stability-ai/stable-diffusion")
     output = Response(model.predict(prompt= image_prompt))
     # output = "htoutps://replicate.delivery/pbxt/koGiXKGfIDTTPiZlyoojzE4iykjRPnAlhEXhghRWw4VleT1PA/out-0.png"
     # output.headers['Access-Control-Allow-Origin'] = '*'

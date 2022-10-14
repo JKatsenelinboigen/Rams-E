@@ -43,7 +43,7 @@ function IngredientsForm(props: IngredientsFormFunction){
             
             <Grid container spacing={2}>
                 <Grid item xs={10}>
-                    <TextField id="newIngredient" style={{width:"100%"}} value= {newIngredient} helperText={"Enter ingredients one at a time or comma separated. Eg: \"Bacon, eggs, cheese\" "} onChange={(e) =>
+                    <TextField id="newIngredient" style={{width:"100%"}} value= {newIngredient} helperText={"Enter ingredients/keywords one at a time or comma separated. Eg: \"Bacon, eggs, cheese\" "} onChange={(e) =>
                         setNewIngredient(e.currentTarget.value)
                     }/>
                 </Grid>

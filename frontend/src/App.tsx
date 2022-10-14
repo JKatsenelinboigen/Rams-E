@@ -3,8 +3,6 @@ import { Box, Card, CircularProgress, Container, Divider, Grid } from '@mui/mate
 import IngredientsForm from './components/IngredientsForm';
 import SubmitForm from './components/SubmitForm';
 import Recipe from './components/Recipe';
-import Footer from './components/Footer';
-
 
 function App() {
 
@@ -17,17 +15,17 @@ function App() {
       
 
   var output = (
-    <Container>
+    <Container sx={{ boxShadow: 10 }}>
       <Card style ={styles.headerText} > 
-          <h1>RAMS-E: </h1>
-          <h2>A GPT-3 based AI recipe generator.</h2>
-          <h3>100% unique, original recipes at the press of a button</h3>
+        <h1>RAMS-E: </h1>
+        <h2>A GPT-3 based AI recipe generator.</h2>
+        <h3>100% unique, original recipes at the press of a button.</h3>  
       </Card>
 
 
       <IngredientsForm parentSetArray={setIngredientsList}/>
       <SubmitForm ingredients={ingredientsList} setWrittenRecipe={setWrittenRecipe} setImage={setImageSrc} setIsRecipeLoading={setIsRecipeLoading} setIsImageLoading={setIsImageLoading}/>
-    
+      
     </Container>
   );
 
@@ -85,13 +83,12 @@ const styles = ({
     color: "#FFF",
     padding: "2%",
     fontFamily: "Garamond",
-    alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#a65021",
     borderWidth: "2px",
     borderColor: "#000",
     borderRadius:"16px",
-    marginBottom:"5%"
+    marginBottom:"5%",
+    paddingTop: '3%'
   },
   loadingText:{
     fontFamily: "Garamond",
